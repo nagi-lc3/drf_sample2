@@ -6,7 +6,7 @@
     </b-alert>
     <b-alert
       variant="warning" show v-show="message.warnings.length > 0" class="mb-0">
-      <p v-for="warning in message.warnings" class="mb-0">{{ warning }}</p>
+      <p v-for="(warning, index) in message.warnings" :key="index" class="mb-0">{{ warning }}</p>
     </b-alert>
     <b-alert variant="info" show v-show="message.info" class="mb-0">
       {{ message.info }}
